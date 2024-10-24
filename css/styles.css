@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(243, 186, 136);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+a {
+    color: rgb(128, 195, 235);
+    text-decoration: none;
+}
+
+div a {
+    color: red;
+}
+
+nav {
+    display: block;
+    background-color: rgb(13, 102, 98);
+    border: 2px solid gray;
+    margin: 2px;
+    padding: 2px;
+}
+
+nav a {
+    margin: 4px;
+}
+
+p a {
+    color: red; /*PLACEHOLDER COLOR*/
+    text-decoration: underline;
+ }
+
+section {
+    margin: 20px;
+ }
+
+ /* Flexbox for the Intro section */
+#intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Image and text layout */
+#intro img {
+    width: 40%;
+}
+
+#intro div {
+    width: 50%;
+    text-align: center;
+    font-size: larger;
+}
+
+#intro div a {
+    color: #098b30;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Grid layout for the 2x2 squares and tall div */
+#needs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 1fr; /* Two columns for squares, one for the taller div */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    gap: 10px;
+    height: 400px;
+}
+
+#needs div:nth-child(1),
+#needs div:nth-child(2),
+#needs div:nth-child(3),
+#needs div:nth-child(4) {
+    background-color: #1cc5db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+/* Explicitly places the first four divs in a 2x2 layout */
+#needs div:nth-child(1) {
+    grid-column: 1; /* First column, first row */
+    grid-row: 1;
+}
+
+#needs div:nth-child(2) {
+    grid-column: 2; /* Second column, first row */
+    grid-row: 1;
+}
+
+#needs div:nth-child(3) {
+    grid-column: 1; /* First column, second row */
+    grid-row: 2;
+}
+
+#needs div:nth-child(4) {
+    grid-column: 2; /* Second column, second row */
+    grid-row: 2;
+}
+
+/* The taller div on the right, spanning both rows */
+#needs div:nth-child(5) {
+    grid-column: 3; /* Places the div in the third column */
+    grid-row: span 2; /* Spans both rows */
+    background-color: #1cc5db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
